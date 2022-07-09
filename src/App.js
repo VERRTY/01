@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import NavBar from "./components/NavBar";
+import {useState} from "react";
+
+import './styles/App.css'
+import CardList from "./components/CardList";
+
 
 function App() {
+    const [cards, setCard] = useState([
+        {id: 1, title: 'React', body: 'lorem25'},
+        {id: 2, title: 'React', body: 'lorem25'},
+        {id: 3, title: 'React', body: 'lorem25'},
+        {id: 4, title: 'React', body: 'lorem25'},
+        {id: 5, title: 'React', body: 'lorem25'}
+    ])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <NavBar/>
+        <CardList cards={cards}/>
     </div>
   );
 }
