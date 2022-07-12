@@ -15,6 +15,9 @@ const CardItem = (props) => {
                 <MyButton>
                     Кнопка
                 </MyButton>
+                <MyButton>
+                    Удалить
+                </MyButton>
             </div>
         </div>
     );
